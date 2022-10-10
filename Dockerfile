@@ -7,7 +7,7 @@ WORKDIR /data
 RUN python3 -m venv venv            && \
     source venv/bin/activate        && \
     pip install --upgrade pip wheel && \
-    pip install howfairis
+    pip install git+https://github.com/benvanwerkhoven/howfairis.git
 
 ENV PATH=/data/venv/bin:${PATH}
 
