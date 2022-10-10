@@ -1,6 +1,7 @@
 FROM python:3.9-alpine
 
-RUN apk update && apk add --no-cache build-base
+RUN apk update && apk upgrade && \
+    apk add --no-cache build-base bash git openssh
 
 WORKDIR /data
 
